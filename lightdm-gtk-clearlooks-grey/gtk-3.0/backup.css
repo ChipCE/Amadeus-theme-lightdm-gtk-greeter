@@ -1,0 +1,219 @@
+/***********************************************************************
+ * lightdm/US/2017/Grey *
+ ***********************************************************************/
+
+/* lightdm greeter color scheme */
+
+@define-color lightdm_bg_color #868079;
+@define-color lightdm_fg_color #1a1a1a;
+@define-color lightdm_bg_color_b #ffffff;
+@define-color color_orange_nixie #ffba00;
+@define-color color_orange_glow #fff749;
+@define-color color_gray_light #333333;
+@define-color color_gray_dark #1e1e1e;
+@define-color color_white_smoke #cecece;
+@define-color color_white_clear #f7ffff;
+@define-color color_red #ff0000;
+
+#login_window,
+#login_notebook {
+    background-color: transparent;
+    border : none;
+}
+
+*
+{
+    background-color: transparent;
+}
+
+/* confirm dialog */
+#restart_dialog,
+#shutdown_dialog
+{
+    background-color: alpha(@color_gray_light,0.8);
+    border : none;
+}
+
+/* confirm dialog */
+#restart_dialog *,
+#shutdown_dialog * {
+    color: @color_white_smoke;
+}
+
+/* login window  global*/
+#login_window *
+{
+    color: @color_orange_nixie;
+}
+
+
+/* password text */
+#prompt_entry{
+    color: @color_orange_nixie;
+    background-color : transparent;
+    border: 1px solid alpha(@color_orange_nixie,0.5);
+}
+
+
+/* top menu bar */
+#panel_window,
+#panel_window #menubar,
+#panel_window > #menubar {
+    background-color: alpha(@color_gray_dark,0.8);
+    background-image: none;
+    color: @color_white_smoke;
+
+    border-style: solid;
+    border-width: 0px 0px 0px 0px;
+}
+
+/* top menu inner, dropdown menu background */
+#panel_window > #menubar * 
+{
+    text-shadow: none;
+    color:@color_white_smoke;
+    background-color:alpha(@color_gray_dark,0.8);
+}
+
+#panel_window #menubar 
+{
+    border-radius: 0px;
+    background-color: @color_gray_dark;
+}
+
+#panel_window > #menubar *:hover 
+{
+    text-shadow: 0 0 7px @color_orange_glow;
+}
+
+#panel_window #menubar > .menuitem,
+#panel_window > #menubar > .menuitem 
+{
+    background-color: @color_orange_nixie;
+    color: @color_orange_nixie;
+}
+
+#panel_window > #menubar > .menuitem:active,
+#panel_window.menubar.menuitem:hover,
+#panel_window.menubar .menuitem:hover,
+#panel_window .menubar.menuitem:hover {
+    background-color: #d20f0f;
+    border-color: #d20f0f;
+}
+
+#message_label {
+    color: #d20f0f;
+}
+
+/* ui buttons */
+#login_button,
+#login_window .button{
+    color:@color_orange_nixie;
+    background-color: alpha(@color_gray_dark, 0.1);
+    background-image: none;
+    border: 1px solid alpha(@color_orange_nixie,0.5);
+    padding: 4px 16px 4px 16px;
+    border-radius: 4px;
+    text-shadow: 0 0 7px @color_orange_glow;
+    box-shadow: inset 1px 0px alpha(@color_orange_glow, 0.2),
+                inset -1px 0px alpha(@color_orange_glow, 0.2),
+                inset 0px 1px alpha(@color_orange_glow, 0.3),
+                inset 0px -1px alpha(@color_orange_glow, 0.1);
+}
+
+#login_button *
+{
+    background-color: transparent;
+}
+
+/* ui buttons hover */
+#login_window .button:hover ,
+#login_button:hover
+{
+    background-color: alpha(@color_gray_dark, 0.5);
+    text-shadow: 0 0 12px @color_orange_glow;
+    border-color: @color_orange_glow;
+    color:@color_orange_glow;
+}
+
+/* ui buttons focus */
+#login_window .button:focus ,
+#login_button:focus
+{
+    background-color: alpha(@color_gray_dark, 0.5);
+    text-shadow: 0 0 12px @color_orange_glow;
+    border-color: @color_orange_glow;
+    color:@color_orange_glow;
+}
+
+
+/* confirm buttons */
+#cancel_button,
+#shutdown_button,
+#restart_button {
+    color: @color_white_smoke;
+    background-color: alpha(@color_gray_dark, 0.1);
+    background-image: none;
+    border: 1px solid alpha(@color_white_smoke,0.5);
+    padding: 4px 16px 4px 16px;
+    border-radius: 4px;
+    text-shadow: 0 0 7px @color_orange_glow;
+    box-shadow: inset 1px 0px alpha(@color_orange_glow, 0.2),
+                inset -1px 0px alpha(@color_orange_glow, 0.2),
+                inset 0px 1px alpha(@color_orange_glow, 0.3),
+                inset 0px -1px alpha(@color_orange_glow, 0.1);
+}
+
+/* confirm button hover */
+#cancel_button:hover,
+#shutdown_button:hover,
+#restart_button:hover
+{
+    background-color: alpha(@color_gray_dark, 0.5);
+    color: @color_white_clear;
+    text-shadow: 0 0 12px @color_orange_glow;
+    border-color: @color_orange_glow;
+}
+
+/* button focus */
+#shutdown_button:focus,
+#restart_button:focus,
+#cancel_button:focus {
+    border-color: @color_orange_glow;
+}
+
+#language_combobox .button:insensitive,
+#session_combobox .button:insensitive {
+    background-color: shade (@lightdm_bg_color, 1.5);
+}
+
+#login_window GtkComboBox .button {
+    padding: 2px 6px 2px 2px;
+    background-color: transparent;
+}
+
+
+#user_combobox .menu *,
+#session_combobox .menu *,
+#language_combobox .menu * {
+    color: shade (@lightdm_fg_color, 0.2);
+    text-shadow: none;
+}
+
+#user_combobox .menu *:hover,
+#session_combobox .menu *:hover,
+#language_combobox .menu *:hover {
+    color: @lightdm_fg_color;
+    text-shadow: 0px 1px alpha(@dark_shadow, 0.4);
+}
+
+#logo,
+#user_image {
+    border : none;
+    box-shadow: inset 1px 0px alpha(@light_shadow, 0.2),
+                inset -1px 0px alpha(@light_shadow, 0.2),
+                inset 0px 1px alpha(@light_shadow, 0.3),
+                inset 0px -1px alpha(@light_shadow, 0.1);
+}
+
+
