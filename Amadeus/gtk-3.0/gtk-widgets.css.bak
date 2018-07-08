@@ -769,6 +769,13 @@ spinbutton button,
 combobox button.combo,
 .titlebar .titlebutton:hover,
 colorchooser #add-color-button {
+	background-image: -gtk-gradient (linear,
+	                  left top,
+	                  left bottom,
+	                  from (@button_gradient_a),
+	                  color-stop (0.50, @button_gradient_b),
+	                  color-stop (0.50, @button_gradient_c),
+	                  to (@button_gradient_d));
 	background-color: transparent;
 }
 
@@ -796,6 +803,13 @@ toolbar.primary-toolbar button:focus:active,
 toolbar.primary-toolbar button:focus:hover:active,
 toolbar.inline-toolbar button:checked,
 toolbar.inline-toolbar button:hover:active {
+	background-image: linear-gradient(to bottom,
+	                  @button_active_gradient_a,
+	                  @button_active_gradient_b 3px,
+	                  @button_active_gradient_c 4px,
+	                  @button_active_gradient_d 50%,
+	                  @button_active_gradient_e 50%,
+	                  @button_active_gradient_f);
 	background-color: transparent;
 }
 
@@ -834,7 +848,13 @@ colorchooser #add-color-button:hover {
 button:disabled,
 combobox button.combo:disabled,
 toolbar combobox button.combo:disabled {
-	background-color: transparent;
+	background-image: linear-gradient(to bottom,
+	                  @button_insensitive_inner_border_color 1px,
+	                  @button_insensitive_gradient_a 2px,
+	                  @button_insensitive_gradient_b 50%,
+	                  @button_insensitive_gradient_c 50%,
+	                  @button_insensitive_gradient_d);
+	background-color: @insensitive_bg_color;
 }
 
 /* Pushed + Insensitive button background */
