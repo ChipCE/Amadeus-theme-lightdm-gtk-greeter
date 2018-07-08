@@ -1,0 +1,1 @@
+# Amadeus-theme-lightdm-gtk-greeter
