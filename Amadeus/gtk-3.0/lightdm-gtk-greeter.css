@@ -103,24 +103,25 @@
 
 
 
-/* --------------------------- ui buttons ------------------------------------------ */
+/* <tested>--------------------------- ui buttons ------------------------------------------ */
 
 #login_button,
 #login_window .button,
 #cancel_button,
 #shutdown_button,
 #restart_button {
-    color: @color_white_smoke;
+    color: @color_orange_nixie;
     background-color: alpha(@color_gray_dark, 0.1);
     background-image: none;
-    border: 1px solid alpha(@color_white_smoke,0.5);
+    border: 1px solid  @color_orange_nixie;
     padding: 4px 16px 4px 16px;
     border-radius: 4px;
     text-shadow: 0 0 7px @color_white_snoke;
-    box-shadow: inset 1px 0px alpha(@color_white_smoke, 0.2),
-                inset -1px 0px alpha(@olor_white_smoke, 0.2),
-                inset 0px 1px alpha(@olor_white_smoke, 0.3),
-                inset 0px -1px alpha(@olor_white_smoke, 0.1);
+    box-shadow: inset 1px 0px alpha(@color_orange_glow, 0.2),
+                inset -1px 0px alpha(@color_orange_glow, 0.2),
+                inset 0px 1px alpha(@color_orange_glow, 0.3),
+                inset 0px -1px alpha(@color_orange_glow, 0.1);
+    text-shadow: 0 0 5px alpha(@color_orange_glow, 0.7);
 }
 
 /* ui button hover */
@@ -151,10 +152,40 @@
 
 /* --------------------------------------- testing ---------------------------------- */
 
-
+/*<tested>password entry */
 #prompt_entry{
-    color: @color_gray_light;
-    border: 1px solid @color_gray_dark;
+    color: @color_orange_nixie;
+    border: 1px solid @color_orange_nixie;
+    border-radius: 3px;
+    background-color: alpha(@color_gray_dark, 0.1);
+    background-image: none;
+    text-shadow: 0 0 5px alpha(@color_orange_glow, 0.7);
+    box-shadow: inset 1px 0px alpha(@color_orange_glow, 0.2),
+                inset -1px 0px alpha(@color_orange_glow, 0.2),
+                inset 0px 1px alpha(@color_orange_glow, 0.3),
+                inset 0px -1px alpha(@color_orange_glow, 0.1);
+}
+
+/* <tested> user combobox outer */
+#user_combobox
+{
+    color: @color_orange_nixie;
+    border: none;
+    background-color: transparent;
+    background-image: none;
+    border: 1px solid @color_orange_nixie;
     border-radius: 3px;
 }
 
+
+
+/* <tested> user combobox inner */
+#user_combobox *
+{
+    color: @color_orange_nixie;
+    border: none;
+    border-radius: 3px;
+    background-color: transparent;
+    background-image: none;
+    text-shadow: 0 0 5px alpha(@color_orange_glow, 0.7);
+}
