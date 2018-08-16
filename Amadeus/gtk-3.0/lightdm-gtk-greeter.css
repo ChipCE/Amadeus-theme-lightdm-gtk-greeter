@@ -75,8 +75,11 @@
 #restart_dialog {
     border-style: none;
     border-radius: 0px;
-    background-color:transparent;
-    color: @color_white_smoke;
+    background-color: alpha(@color_gray_dark, 0.8);
+    color: @color_orange_nixie;
+    border: none;
+    border-radius: 3px;
+    text-shadow: 0 0 5px alpha(@color_orange_glow, 0.7);
 }
 
 
@@ -116,7 +119,7 @@
     border: 1px solid  @color_orange_nixie;
     padding: 4px 16px 4px 16px;
     border-radius: 4px;
-    text-shadow: 0 0 7px @color_white_snoke;
+    text-shadow: 0 0 12px @color_orange_glow;
     box-shadow: inset 1px 0px alpha(@color_orange_glow, 0.2),
                 inset -1px 0px alpha(@color_orange_glow, 0.2),
                 inset 0px 1px alpha(@color_orange_glow, 0.3),
@@ -145,9 +148,9 @@
 #login_button:focus
 {
     background-color: alpha(@color_gray_dark, 0.5);
-    text-shadow: 0 0 12px @color_white_clear;
-    border-color: @color_white_clear;
-    color:@color_white_clear;
+    text-shadow: 0 0 12px @color_orange_glow;
+    border-color: @color_orange_glow;
+    color:@color_orange_glow;
 }
 
 /* --------------------------------------- testing ---------------------------------- */
@@ -159,7 +162,7 @@
     border-radius: 3px;
     background-color: alpha(@color_gray_dark, 0.1);
     background-image: none;
-    text-shadow: 0 0 5px alpha(@color_orange_glow, 0.7);
+    text-shadow: 0 0 12px @color_orange_glow, 0.7;
     box-shadow: inset 1px 0px alpha(@color_orange_glow, 0.2),
                 inset -1px 0px alpha(@color_orange_glow, 0.2),
                 inset 0px 1px alpha(@color_orange_glow, 0.3),
@@ -187,5 +190,11 @@
     border-radius: 3px;
     background-color: transparent;
     background-image: none;
-    text-shadow: 0 0 5px alpha(@color_orange_glow, 0.7);
+    text-shadow: 0 0 12px @color_orange_glow;
+}
+
+.menu
+{
+    background-image: none;
+    background-color: blue;
 }

@@ -1571,13 +1571,14 @@ treemenu menuitem {
 menu,
 .menu {
 	font-weight: normal;
-	background-color: transparent;
-	color: @menu_fg_color;
+	background-color: @color_gray_dark;
+	color: @color_orange_nixie;
 	padding: 0px;
 	border-style: solid;
 	border-width: 1px;
 	border-color: @menu_border_color;
 }
+
 
 menu button,
 .menu button{
